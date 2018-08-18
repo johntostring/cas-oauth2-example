@@ -1,0 +1,14 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^(http|https)://.*",
+  "name": "all",
+  "id": 1005,
+  "description": "allow all service",
+  "clientId" : "all_the_key",
+  "clientSecret" : "all_the_secret",
+  "evaluationOrder": 1005,
+  "theme":"apereo",
+  "attributeReleasePolicy": {
+    "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}

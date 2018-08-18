@@ -1,0 +1,17 @@
+server:
+  port: 9000
+
+shiro:
+  realm-class: io.buji.pac4j.realm.Pac4jRealm
+  filters:
+    demo: com.millinch.casclient.web.DemoFilter
+  filter-chain-definitions:
+    '[/callback]': callbackFilter
+    '[/ping]': securityFilter, demo
+    '[/logout]': logoutFilter
+
+logging:
+  level:
+    org.pac4j: DEBUG
+    io.buji: DEBUG
+#    org.springframework: DEBUG
